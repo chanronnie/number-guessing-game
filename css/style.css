@@ -315,3 +315,35 @@ footer .fa-heart {
 .hidden {
   display: none;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 468px) {
+  .container {
+    width: 330px;
+    height: 580px;
+    padding: 3rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .buttons .btn {
+    font-size: 1rem;
+  }
+
+  .restart {
+    left: 5%;
+    font-size: 0.8rem;
+    width: 90px;
+  }
+
+  .hint-modal {
+    width: 340px;
+  }
+
+  .hint-content p:nth-of-type(2) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
