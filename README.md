@@ -1,10 +1,18 @@
 # Number Guessing Game
 
+[![View - My Repositories](https://img.shields.io/badge/View-My_Repositories-brown?logo=GitHub)](https://github.com/chanronnie?tab=repositories)
+[![View - More Screenshots](https://img.shields.io/badge/View-More_Screenshots-037a76?logo=GitHub)](./images)
+[![View - Demo ](https://img.shields.io/badge/View-Demo-ff0096)](https://chanronnie.github.io/number-guessing-game/)
+
 <img src="./images/game-preview.png" alt = "Game-Preview">
 
 ## About this project
 
 The goal of this project is to create a simple (yet deadly 💀) interactive number guessing game that runs in the browser using HTML, CSS, and JavaScript. Inspired by the thrilling theme of "Squid Game", players need to guess a number between 1 and 20, with only a limited number of chances to get it right. The game features various setups for winning and losing, hint functionality, and responsive design.
+
+<br>
+
+[![View - Demo ](https://img.shields.io/badge/View-Demo-ff0096?style=for-the-badge)](https://chanronnie.github.io/number-guessing-game)
 
 ## Rules
 
