@@ -7,6 +7,7 @@ let secretNumber;
 
 // BUTTON VARIABLES
 const btnCheck = document.querySelector(".check");
+const btnRestart = document.querySelector(".restart");
 
 // ------------------------------ //
 // GAME LOGIC FUNCTIONS
@@ -48,18 +49,34 @@ const checkGuess = function () {
   if (guess <= 0 || guess > 20) {
     displayMessage("Invalid - Please give a valid number");
 
-    // Player's guess is correct
+    // When player wins
   } else if (guess === secretNumber) {
     displayMessage("Correct guess - Congratulations!");
     setup.replace("default-setup", "winner-setup");
 
-    // Player's guess is too high
+    // When player's guess is too high
   } else if (guess > secretNumber) {
     updateGameWithMessage("Too high...");
 
-    // Player's guess is too low
+    // When player's guess is too low
   } else if (guess < secretNumber) {
     updateGameWithMessage("Too low...");
+  }
+};
+
+const restartGame = function () {
+  // Reset state variables with a new secret number
+  generateSecretNumber();
+  chances = 10;
+
+  // Reset to initial state
+  document.querySelector(".guess").value = "";
+  displayMessage("Start guessing...");
+  displayChancesLeft(chances);
+
+  if (setup[1] !== "default-setup") {
+    const currentSetup = setup[1];
+    setup.replace(currentSetup, "default-setup");
   }
 };
 
@@ -71,3 +88,4 @@ generateSecretNumber();
 
 // Handle button events
 btnCheck.addEventListener("click", checkGuess);
+btnRestart.addEventListener("click", restartGame);
