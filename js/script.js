@@ -28,6 +28,7 @@ const displayChancesLeft = function (chances) {
 const endGame = function () {
   displayMessage("Game over.");
   displayChancesLeft(0);
+  setup.replace("default-setup", "game-over-setup");
 };
 
 const updateGameWithMessage = function (message) {

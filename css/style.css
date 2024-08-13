@@ -206,6 +206,25 @@ h1 {
   }
 }
 
+.game-over-setup {
+  border: 5px solid var(--game-over-color);
+  background-color: transparent;
+  color: var(--game-over-color);
+
+  .guess {
+    border: 2px solid var(--game-over-color);
+    background-color: transparent;
+  }
+
+  .message {
+    font-weight: bold;
+  }
+
+  .buttons {
+    visibility: hidden;
+  }
+}
+
 /* FOOTER*/
 footer {
   background-color: transparent;
