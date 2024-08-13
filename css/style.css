@@ -186,3 +186,14 @@ h1 {
     visibility: visible;
   }
 }
+
+/* FOOTER*/
+footer {
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+footer .fa-heart {
+  color: var(--primary-color);
+}
