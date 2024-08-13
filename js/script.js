@@ -1,6 +1,7 @@
 "use script";
 
 // STATE VARIABLES
+let setup = document.querySelector(".container").classList;
 let chances = Number(document.querySelector(".chances").textContent);
 let secretNumber;
 
@@ -49,6 +50,7 @@ const checkGuess = function () {
     // Player's guess is correct
   } else if (guess === secretNumber) {
     displayMessage("Correct guess - Congratulations!");
+    setup.replace("default-setup", "winner-setup");
 
     // Player's guess is too high
   } else if (guess > secretNumber) {

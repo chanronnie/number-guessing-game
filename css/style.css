@@ -187,6 +187,25 @@ h1 {
   }
 }
 
+.winner-setup {
+  border: 5px solid var(--winner-color);
+  background-color: var(--winner-color);
+  color: var(--secondary-color);
+
+  .guess {
+    border: 2px solid var(--secondary-color);
+    background-color: var(--winner-color);
+  }
+
+  .message {
+    font-weight: bold;
+  }
+
+  .buttons {
+    visibility: hidden;
+  }
+}
+
 /* FOOTER*/
 footer {
   background-color: transparent;
