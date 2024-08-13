@@ -32,4 +32,7 @@ The goal of this project is to create a simple (yet deadly 💀) interactive num
 Below are previews of the different game setups. <br>
 For a higher-resolution view, you can access the full PDF [here](./images/number-guessing-screenshots.pdf).
 
-![Screenhots](./images/screenshots.png)
+![default-setup](./images/default-setup.png)
+![hint-setup](./images/hint-setup.png)
+![winner-setup](./images/winner-setup.png)
+![game-over-setup](./images/game-over-setup.png)
