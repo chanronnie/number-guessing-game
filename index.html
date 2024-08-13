@@ -5,9 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Guess My Number</title>
+    <title>Guess The Number</title>
   </head>
   <body>
+    <button class="btn restart">Restart</button>
+
+    <div class="container default-setup">
+      <div class="container-flex">
+        <!-- Header -->
+        <header class="header">
+          <h1>Guess the Number</h1>
+          <p>Between 1 and 20</p>
+        </header>
+
+        <!-- Input -->
+        <input type="number" class="guess" placeholder="&#xF120;" style="font-family: Arial, FontAwesome" />
+
+        <!-- Message Board -->
+        <section class="message-board">
+          <p class="message">Start guessing...</p>
+          <p>Chances: <span class="chances">10</span> / 10</p>
+        </section>
+
+        <!-- Buttons -->
+        <section class="buttons">
+          <button class="btn check">Check</button>
+          <button class="btn show-hint">Hint</button>
+        </section>
+      </div>
+    </div>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

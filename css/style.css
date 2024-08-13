@@ -37,3 +37,152 @@ a {
 a:hover {
   color: var(--primary-color);
 }
+
+/* UTILITY CLASSES */
+.container {
+  width: 540px;
+  height: 480px;
+  padding: 3rem;
+  border-radius: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.container-flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  border-color: var(--tertiary-color);
+}
+
+/* HEADER */
+header {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* NUMBER INPUT */
+.guess {
+  width: 100px;
+  height: 100px;
+  font-family: inherit;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.guess:focus {
+  outline: none;
+}
+
+.guess::-webkit-outer-spin-button,
+.guess::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.guess::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* MESSAGE BOARD */
+.message-board {
+  margin-bottom: 2rem;
+}
+
+.message-board p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.message {
+  padding: 0.5rem 1rem;
+  color: var(--tertiary-color);
+  background-color: var(--secondary-color);
+  opacity: 0.8;
+}
+
+/* BUTTONS */
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.restart {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+
+  width: 90px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.restart:hover {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  opacity: 1;
+}
+
+/* SETUP STYLES */
+.default-setup {
+  border: 5px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--secondary-color);
+
+  .guess {
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+  }
+
+  .message {
+    font-weight: normal;
+  }
+
+  .buttons {
+    visibility: visible;
+  }
+}
