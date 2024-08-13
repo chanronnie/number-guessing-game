@@ -4,10 +4,19 @@
 let setup = document.querySelector(".container").classList;
 let chances = Number(document.querySelector(".chances").textContent);
 let secretNumber;
+let hintMin = 1;
+let hintMax = 20;
 
 // BUTTON VARIABLES
 const btnCheck = document.querySelector(".check");
 const btnRestart = document.querySelector(".restart");
+const btnHint = document.querySelector(".show-hint");
+const btnClose = document.querySelector(".close-hint");
+const btnGotIt = document.querySelector(".got-it-hint");
+
+// MODAL VARIABLES
+const hintModal = document.querySelector(".hint-modal");
+const overlay = document.querySelector(".overlay");
 
 // ------------------------------ //
 // GAME LOGIC FUNCTIONS
@@ -57,10 +66,12 @@ const checkGuess = function () {
     // When player's guess is too high
   } else if (guess > secretNumber) {
     updateGameWithMessage("Too high...");
+    if (guess < hintMax) hintMax = guess;
 
     // When player's guess is too low
   } else if (guess < secretNumber) {
     updateGameWithMessage("Too low...");
+    if (guess > hintMin) hintMin = guess;
   }
 };
 
@@ -68,6 +79,8 @@ const restartGame = function () {
   // Reset state variables with a new secret number
   generateSecretNumber();
   chances = 10;
+  hintMin = 1;
+  hintMax = 20;
 
   // Reset to initial state
   document.querySelector(".guess").value = "";
@@ -80,6 +93,29 @@ const restartGame = function () {
   }
 };
 
+const showHint = function () {
+  // Display the hint modal
+  hintModal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+
+  // Compute the remaining chances (each hint costs 2 chances)
+  chances -= 2;
+  if (chances <= 0) {
+    chances = 0;
+    endGame();
+  }
+  displayChancesLeft(chances);
+
+  // Reveal the hint
+  document.querySelector(".hint-min").textContent = hintMin;
+  document.querySelector(".hint-max").textContent = hintMax;
+};
+
+const closeHint = function () {
+  hintModal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
 // ------------------------------ //
 // EVENT HANDLERS
 
@@ -89,3 +125,13 @@ generateSecretNumber();
 // Handle button events
 btnCheck.addEventListener("click", checkGuess);
 btnRestart.addEventListener("click", restartGame);
+
+btnHint.addEventListener("click", showHint);
+btnClose.addEventListener("click", closeHint);
+btnGotIt.addEventListener("click", closeHint);
+overlay.addEventListener("click", closeHint);
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && !hintModal.classList.contains("hidden")) {
+    closeHint();
+  }
+});
