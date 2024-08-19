@@ -25,11 +25,11 @@ The goal of this project is to create a simple (yet deadly 💀) interactive num
 
 ## Features
 
-- CSS Flexbox is used to arrange HTML elements.
-- Different game setups are implemented using CSS classes and JavaScript for winning or losing scenarios.
-- Media queries are included for responsive design.
-- DOM manipulation with JavaScript adds functionality to buttons and manages game logic.
-- A modal window is provided to display hints if the player chooses to use them.
+- **CSS Flexbox** for arranging HTML elements
+- Dynamic game setups for win/lose scenarios using CSS classes and JavaScript
+- **Responsive design** with media queries
+- **DOM manipulation** for button functionality and game logic management
+- **Modal window** for optional hints during gameplay
 
 ## Technologies
 
@@ -44,3 +44,7 @@ For a higher-resolution view, you can access the full PDF [here](./images/number
 ![hint-setup](./images/hint-setup.png)
 ![winner-setup](./images/winner-setup.png)
 ![game-over-setup](./images/game-over-setup.png)
+
+## Licence
+
+&copy; 2024 - This project is licensed under the [MIT License](./LICENSE).
